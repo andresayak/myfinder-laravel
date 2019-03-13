@@ -1,0 +1,23 @@
+{
+    "name": "andresayak/myfinder-laravel",
+    "description": "MyFinder package for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.6.0",
+        "laravel/framework": "^5.5",
+        "monolog/monolog": "~1.4,>=1.4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "andresayak\\MyFinder\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "andresayak\\MyFinder\\MyFinderServiceProvider"
+            ]
+        }
+    }
+}
