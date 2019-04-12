@@ -1,7 +1,7 @@
 <?php
 
 Route::group(['middleware' => 'auth:api'], function () {
-    Route::post('/myfinder/browser', 'andresayak\MyFinder\Controller\MyFinderController@browser')
+    Route::get('/myfinder/browser', 'andresayak\MyFinder\Controller\MyFinderController@browser')
         ->name('myfinder_browser');
     
     Route::post('/myfinder/upload', 'andresayak\MyFinder\Controller\MyFinderController@upload')
