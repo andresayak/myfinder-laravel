@@ -46,6 +46,8 @@ class MyFinder {
             $files[] = [
                 'filename' =>   preg_replace('/^'. preg_quote($dir, '/').'\//', '', $file),
                 'filesize'   =>  $storage->size($file),
+                'lastModified'  =>  $storage->lastModified($file),
+                'getimagesize'  =>  getimagesize($storage->path($file)),
                 'url'   =>  $storage->url($file),
             ];
         }
