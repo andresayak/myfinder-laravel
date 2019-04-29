@@ -51,6 +51,9 @@ class MyFinder {
                 'url'   =>  $storage->url($file),
             ];
         }
+        usort($files, function($a, $b) {
+            return $a['lastModified'] > $b['lastModified']?-1:1;
+        });
         return [
             'directories'   =>  $directories,
             'files' =>  $files
