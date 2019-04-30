@@ -10,6 +10,6 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::post('/myfinder/mkdir', 'andresayak\MyFinder\Controller\MyFinderController@mkdir')
         ->name('myfinder_mkdir');
     
-    Route::get('/myfinder/remove', 'andresayak\MyFinder\Controller\MyFinderController@remove')
+    Route::post('/myfinder/remove', 'andresayak\MyFinder\Controller\MyFinderController@remove')
         ->name('myfinder_remove');
 });

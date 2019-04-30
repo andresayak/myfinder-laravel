@@ -65,10 +65,18 @@ class MyFinder {
         $storage->putFileAs(($dir?$dir.'/':''), $file, $file->getClientOriginalName());
         return $this->browser($dir); 
     }
+    
     public function mkdir($dir, $folderName)
     {
         $storage = $this->_getStorage();
         $storage->makeDirectory(($dir?$dir.'/':'').$folderName);
         return $this->browser($dir); 
+    }
+    
+    public function remove($filename)
+    {
+        $storage = $this->_getStorage();
+        $storage->delete($filename);
+        return $this->browser('/'); 
     }
 }
